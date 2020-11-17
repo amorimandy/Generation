@@ -18,15 +18,15 @@ public class Exercicio4 {
 			System.out.println("Informe a medida da altura (em cm): ");
 			h = ler.nextInt();
 			area = ml * h / 2;
-			System.out.println("A ·rea total do tri‚ngulo em centÌmetros È " + area + "cm≤.");
+			System.out.println("A √°rea total do tri√¢ngulo em cent√≠metros √© " + area + "cm¬≤.");
 		} else if(numLados==4) {
 			area = ml*ml;
-			System.out.println("A ·rea total do quadrado em centÌmetros È " + area + "cm≤.");
+			System.out.println("A √°rea total do quadrado em cent√≠metros √© " + area + "cm¬≤.");
 		} else if(numLados==5) {
-			System.out.println("Informe a medida do apÛtema (em cm): ");
-			a = ler.nextInt();
-			area = 5*ml*a;
-			System.out.println("A ·rea total do pent·gono em centÌmetros È " + area + "cm≤.");
+			System.out.println("√â um PENT√ÅGONO");
+			//a = ler.nextInt();
+			//area = 5*ml*a;
+			//System.out.println("A √°rea total do pent√°gono em cent√≠metros √© " + area + "cm¬≤.");
 		}
 	}
 }
