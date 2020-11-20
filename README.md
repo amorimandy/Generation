@@ -1,4 +1,4 @@
-<h1 align="center">Generation Brasil</h1>
+<h1 align="center">JAVA</h1>
 
 <img align="center" src="gen-img.png">
 
