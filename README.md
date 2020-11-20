@@ -9,5 +9,5 @@
 •  <a href="https://github.com/amorimandy/Generation/tree/main/Ex-Java/Exerc%C3%ADcios/exercicios-condicional/src/laco_condicional">Exercícios Condicional</a> •
  <a href="https://github.com/amorimandy/Generation/tree/main/Ex-Java/Exerc%C3%ADcios/exercicios-controle-de-fluxo/src/fluxo">Exercícios Controle de Fluxo</a> • 
  <a href="https://github.com/amorimandy/Generation/tree/main/Ex-Java/Exerc%C3%ADcios/exercicios-laco-rep/src/exer_laco_rep">Exercícios Laço de Repetição</a> • 
- <a href="https://github.com/amorimandy/Generation/tree/main/Ex-Java/Exerc%C3%ADcios/exercicios-vet-matPOO/src/vet_mat_poo">Exercício Vetores, Matrizes e POO</a> • 
+ <a href="https://github.com/amorimandy/Generation/tree/main/Ex-Java/Exerc%C3%ADcios/exercicios-vet-matPOO/src/vet_mat_poo">Exercícios Vetores, Matrizes e POO</a> • 
 </p>
