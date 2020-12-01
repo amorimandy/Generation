@@ -1,0 +1,42 @@
+ATIVIDADE 1:
+Explique com suas palavras e cite exemplos utilizando no mínimo 2 linhas para cada alternativa.
+
+a)	Select – seleciona e apresenta no output dados de um banco. Sintaxe: delete from nome_da_tabela where condição.
+i.	select * from tb_produtos; – * mostra todas as informações contidas na tabela produtos.
+ii.	select nome from tb_produtos; – mostra apenas a coluna com todos os nomes adicionados.
+
+b)	Insert – seleciona e apresenta no output dados de um banco. Sintaxe: insert into nome_da_tabela (coluna 1, coluna 2, coluna 3) values (____,____,____).
+i.	insert into tb_marcas (nome) values (“Puma”); – cria uma linha e insere o valor “Puma” na posição nome.
+ii.	insert into tb_marcas (nome, ativo) values ("Lacoste", true); – cria duas posições e insere os valores “Puma” e 1 (ativo) na mesma linha, um seguido do outro.
+
+c)	Update – modifica um dado na tabela, atualizando para o novo valor informado. Sintaxe: update nome_da_tabela set coluna1=”valor1”, coluna2= “valor2” WHERE condição.
+i.	update tb_marcas set nome = "Puma" where id = 14; – troca o nome Lacoste por Puma.
+ii.	update tb_produtos set ativo = false where id = 3; – modifica o status de ativo para inativo na linha desejada.
+
+d)	Delete – remove determinada informação na localização desejada. Sintaxe: delete from table_name where condição.
+i.	delete from tb_marcas where id=13; – deleta a linha selecionada conforme o id.
+ii.	delete from tb_marcas; – apaga toda a tabela.
+
+e)	Create Table – cria uma nova tabela conforme os atributos e tipos de dados solicitados. Sintaxe: create table table_name (coluna1 tipo_de_dado, coluna2 tipo_de_dado, coluna3 tipo_de_dado, etc);
+i.	create table tb_produtos (id int, nome varchar, preco decimal(10,2)); – cria uma tabela contendo 3 colunas: id, nome e preco.
+
+id	nome	preco
+		
+
+f)	Drop Table – deleta a tabela passada como parâmetro. Sintaxe: drop table nome_da_tabela;
+i.	drop table tb_produtos; – deleta a tabela recém-criada.
+
+g)	Alter Table – faz alterações (adiciona, deleta ou modifica colunas) na tabela em questão. Sintaxe: alter table nome_da_tabela add nome_da_coluna tipo_de_dado;
+i.	alter table tb_marcas add preco decimal(10,2); – adiciona a coluna preco com tipo de dado decimal na tabela marcas.
+
+
+ATIVIDADE 2
+
+Informe pelo menos 5 tipagens utilizadas no Mysql e diga a sua equivalência em Java (ex: varchar = String)
+
+a)	text = String;
+b)	bit = bit ou boolean;
+c)	int = int;
+d)	smallint = short;
+e)	money = double;
+f)	real = float.

@@ -1,0 +1,44 @@
+create database db_locadora_filmes;
+
+use db_locadora_filmes;
+
+create table tb_filmes(
+	id bigint(5) auto_increment,
+   	nome varchar(150) not null,
+	categoria varchar(100),
+	nota decimal(4,2),
+	qtd bigint(5),
+
+	primary key(id)
+);
+
+select * from tb_filmes
+
+insert into tb_filmes(nome, categoria, nota, qtd) values ("Um sonho de liberdade", "Drama", 9.2, 4);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("O Poderoso Chefão", "Crime", 9.1, 5);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("Batman: O Cavaleiro das Trevas", "Ação", 9.0, 3);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("A Lista de Schindler", "Biografia", 8.9, 7);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("O Senhor dos Anéis: O Retorno do Rei", "Aventura", 8.9, 5);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("Pulp Fiction: Tempo de Violência", "Crime", 8.8, 7);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("Três Homens em Conflito", "Crime", 8.8, 5);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("Clube da Luta", "Drama", 8.8, 5);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("A Origem", "Ficção Científica", 8.7, 5);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("Seven: Os Sete Crimes Capitais", "Crime", 8.6, 6);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("Cidade de Deus", "Crime", 8.6, 5);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("À Espera de um Milagre", "Drama", 8.5, 8);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("Interestelar", "Ficção Científica", 8.5, 5);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("Parasita", "Drama", 8.5, 5);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("V de Vingança", "Drama", 8.1, 3);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("Divertida Mente", "Animação", 8.1, 4);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("O Sexto Sentido", "Suspense", 8.1, 2);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("Jurassic Park: O Parque dos Dinossauros", "Aventura", 8.1, 5);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("Um Contratempo", "Suspense", 8.0, 7);
+insert into tb_filmes(nome, categoria, nota, qtd) values ("Histórias Cruzadas", "Drama", 8.0, 5);
+ 
+select * from tb_filmes where nome like "s%" 
+
+select * from tb_filmes where categoria = "drama"
+
+delete from tb_filmes where id = 7
+
+update tb_filmes set categoria = "Terror" WHERE id = 17;

@@ -1,0 +1,42 @@
+create database db_rh;
+
+use db_rh;
+
+create table tb_funcionarios(
+	id bigint(5) auto_increment,
+	nome varchar(100) not null,
+	cpf varchar(11) not null,
+	setor varchar(50),
+	salario bigint,
+
+	primary key(id)
+);
+
+select * from tb_funcionarios
+
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Andressa", "19129239345", "Fisioterapia", 1500);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Pedro", "34450208099", "Pediatria", 2500);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Luís", "83201852031", "Oftalmologia", 2100);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Carlos", "12605008029", "Geriatria", 1000);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Paula", "05093026026", "Clínica Médica", 1200);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Alexia", "05485456006", "Fisioterapia", 1500);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Giovani", "07625222080", "Fisioterapia", 1500);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Fernando", "64801131018", "Geriatria", 1000);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Willian", "65502485072", "Urologia", 2800);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Laura", "20378772007", "Oftalmologia", 2100);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Patricia", "86052528044", "Fisioterapia", 1500);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Gustavo", "82595669079", "Urologia", 2800);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Tiago", "92090933054", "Urologia", 2800);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Angela", "03922185002", "Geriatria", 1000);
+insert into tb_funcionarios(nome, cpf, setor, salario) values ("Marta", "87000027045", "Fisioterapia", 1500);
+
+(obs.: esqueci de apagar, subi duas querys com 15 pessoas, daí criou 30 pessoas ^^' já aproveito para fazer a alteração de delete.)
+select * from tb_funcionarios
+
+delete from tb_funcionarios where id>15
+
+select * from tb_funcionarios where salario > 2000
+
+select * from tb_funcionarios where salario < 2000
+
+update tb_funcionarios set nome = "Vanessa" WHERE id=1;

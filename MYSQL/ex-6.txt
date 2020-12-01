@@ -1,0 +1,42 @@
+create database db_petshop;
+
+use db_animais;
+
+create table tb_animais(
+	id bigint(5) auto_increment,
+   	nome varchar(100) not null,
+	tipo varchar(100),
+	peso decimal(6,3),
+	altura decimal(4,2),
+	tipo_atendimento varchar(50),
+
+	primary key(id)
+);
+
+select * from tb_animais
+
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ("cherosin", "cachorro", 3.200, 0.40, "tosa");
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('bigulin', 'tartaruga', 2.200, 0.10, 'consulta');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('bob', 'cachorro', 15.500, 1.00, 'tosa');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('rex', 'cachorro', 3.800, 0.70, 'compras');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('princesa', 'gato', 1.200, 0.40, 'banho');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('piupiu', 'pássaro', 0.200, 0.15, 'banho');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('pitchuca', 'coelho', 1.050, 0.50, 'banho');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('cherry', 'cachorro', 5.000, '0.60, 'tosa');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('biroliro', 'dragão de comodo', 7.400, 1.70, 'consulta psiquiátrica');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('jerry', 'porquinho da índia', 0.150, 0.10, 'tosa');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('tom', 'gato', 3.200, 0.45, 'consulta');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('mourao', 'cobra', 25.300, 1.70, 'consulta psiquiátrica');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('salabin', 'porquinho da índia', 0.250, 0.20, 'banho');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('tiana', 'sapo', 22.000, 0.45, 'consulta');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('buldog', 'peixe', 35.400, 1.70, 'consulta');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('json', 'porquinho da índia', 0.200, 0.10, 'tosa');
+insert into tb_animais(nome, tipo, peso, altura, tipo_atendimento) values ('javascript', 'gato', 3.200, 0.45, 'consulta');
+
+select * from tb_animais where nome like "b%" 
+
+select * from tb_animais where peso > 20
+
+delete from tb_alunes where ra = 15
+
+update tb_animais set peso = 27.400 WHERE id = 9;

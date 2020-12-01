@@ -1,0 +1,42 @@
+create database db_escola;
+
+use db_escola;
+
+create table tb_alunes(
+	ra bigint(5) auto_increment,
+   	nome varchar(100) not null,
+	serie varchar(11) not null,
+	nota decimal(4,2),
+	materia_preferida varchar(50),
+
+	primary key(ra)
+);
+
+select * from tb_alunes
+
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Andressa", "3B", 0.2, "Biologia");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Paulo", "2A",  7.5, "Matemática");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Jéssica", "2A",  7.2, "Português");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Manuela", "2A",  6.8, "Física");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("José", "3A",  9.4, "Matemática");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("César", "1C",  8.2, "Matemática");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Ricardo", "3B", 6.2, "Biologia");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Pedro", "2A", 8.5, "Física");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Jessé", "2A", 7.2, "Português");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Miguel", "2A", 8.8, "Física");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Jean", "3A", 5.4, "Matemática");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Caio", "1C", 10, "Biologia");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Fernando", "3B", 8.6, "Física");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Sandra", "2A", 6.7, "Matemática");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Leticia", "2A", 8.4, "Português");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Jorge", "2A", 6.4, "Física");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Sigrid", "3A", 7.6, "Física");
+insert into tb_alunes(nome, serie, nota, materia_preferida) values ("Vanessa", "1C", 10, "Matemática");
+
+select * from tb_alunes where nota > 7
+
+select * from tb_alunes where nota < 7
+
+delete from tb_alunes where ra = 15
+
+update tb_alunes set nome = "Leticia" WHERE ra = 1;
