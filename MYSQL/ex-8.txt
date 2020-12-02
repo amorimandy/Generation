@@ -1,0 +1,65 @@
+create database db_rh2;
+
+use db_rh2;
+
+create table tb_cargo(
+	id bigint(5) auto_increment,
+	cargo varchar(100) not null,
+	carga_horaria bigint,
+
+	primary key(id)
+);
+
+use db_rh2;
+
+create table tb_funcionario(
+	id bigint(5) auto_increment,
+   	nome varchar(150) not null,
+ 	cpf varchar(11) not null,
+	setor varchar(50),
+	salario decimal (10,2),
+    	cargo_id bigint not null,
+    
+    primary key(id),
+    foreign key(cargo_id) references tb_cargo(id)
+);
+    
+select * from tb_funcionario
+
+insert into tb_cargo(cargo, carga_horaria) values ("Fisioterapeuta", 120)
+insert into tb_cargo(cargo, carga_horaria) values ("Médico", 80)
+insert into tb_cargo(cargo, carga_horaria) values ("Programador", 160)
+insert into tb_cargo(cargo, carga_horaria) values ("Professor", 80)
+insert into tb_cargo(cargo, carga_horaria) values ("Bancário", 160)
+
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Andressa", "19129239345", "Fisioterapia", 1500, 1);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Pedro", "34450208099", "GPD", 2500, 3);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Luís", "83201852031", "Banco", 2100, 5);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Carlos", "12605008029", "Geriatria", 1000, 2);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Paula", "05093026026", "Clínica Médica", 1200, 2);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Alexia", "05485456006", "Pediatria", 1500, 2);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Giovani", "07625222080", "Oftalmologia", 1500, 2);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Fernando", "64801131018", "Geriatria", 1000, 2);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Willian", "65502485072", "Voip", 2800, 3);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Laura", "20378772007", "Banco", 2100, 5);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Patricia", "86052528044", "Educação Jovens e Adultos", 1500, 4);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Gustavo", "82595669079", "Voip", 2800, 3);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Tiago", "92090933054", "UX/UI", 2800, 3);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Angela", "03922185002", "Educação Infantil", 1000, 4);
+insert into tb_funcionario(nome, cpf, setor, salario, cargo_id) values ("Marta", "87000027045", "Fisioterapia", 1500, 2);
+ 
+select * from tb_funcionario where salario>2000 
+
+select * from tb_funcionario where salario>1000 and salario<2000
+
+select * from tb_funcionario where nome like "c%" 
+
+select * from tb_funcionario 
+	inner join tb_cargo on tb_cargo.id = tb_funcionario.cargo_id
+
+select * from tb_funcionario where cargo_id = 3
+ou
+select tb_funcionario.nome, tb_cargo.cargo 
+	from tb_funcionario 
+inner join tb_cargo on tb_cargo.id = tb_funcionario.cargo_id
+where tb_cargo.cargo like "%programador%"
