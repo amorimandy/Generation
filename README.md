@@ -1,11 +1,9 @@
-<h1 align="center">JAVA</h1>
-
 <img align="center" src="gen-img.png">
 
 - :sparkling_heart: Aluna: Andressa Amorim
 - :book: Turma 13 - Generation Brasil (Campinas)
 
-<h4>Atividades realizadas durante o BootCamp Java Generation:</h4>
+<h4>Atividades realizadas durante o BootCamp Java Full Stack Generation:</h4>
 
 <p align="center">
 •  <a href="https://github.com/amorimandy/Generation/tree/main/Ex-Java/Exerc%C3%ADcios/exercicios-condicional/src/laco_condicional">Exercícios Condicional</a> •
