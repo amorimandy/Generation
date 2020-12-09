@@ -36,6 +36,11 @@ public class TurmaController {
 		return ResponseEntity.ok(repository.findAllByTurmaContainingIgnoreCase(turma));
 	}
 	
+	@GetMapping
+	public ResponseEntity<List<Turma>> getAll(){
+		return ResponseEntity.ok(repository.findAll());
+	}
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<Turma> GetById(@PathVariable long id){
 		return repository.findById(id)
