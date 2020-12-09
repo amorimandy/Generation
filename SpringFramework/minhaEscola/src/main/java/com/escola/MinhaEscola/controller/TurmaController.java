@@ -26,6 +26,11 @@ public class TurmaController {
 	@Autowired
 	private TurmaRepository repository;
 	
+	@GetMapping
+	public ResponseEntity<List<Turma>> getAll(){
+		return ResponseEntity.ok(repository.findAll());
+	}
+	
 	@GetMapping("/turma/{turma}")
 	public ResponseEntity<List<Turma>> GetByTurma(@PathVariable String turma){
 		return ResponseEntity.ok(repository.findAllByTurmaContainingIgnoreCase(turma));
