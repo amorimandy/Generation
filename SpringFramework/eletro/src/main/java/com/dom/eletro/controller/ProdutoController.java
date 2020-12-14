@@ -44,6 +44,11 @@ public class ProdutoController {
 		return ResponseEntity.ok(repository.findByPrecoBetween(valueIn, valueFim));
 	}
 	
+	@GetMapping("/porTipo/{id}/{preco}")
+	public ResponseEntity<List<Produto>> GetByTipoEValor(@PathVariable Long id, @PathVariable BigDecimal preco) {
+		return ResponseEntity.ok(repository.findByIdAndPrecoLessThan(id, preco));
+	}
+	
 	@PostMapping
 	public ResponseEntity<Produto> post(@RequestBody Produto produto){
 		return ResponseEntity.status(HttpStatus.CREATED)
