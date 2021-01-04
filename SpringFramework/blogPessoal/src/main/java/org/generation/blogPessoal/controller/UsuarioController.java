@@ -1,7 +1,6 @@
 package org.generation.blogPessoal.controller;
 
 import java.util.Optional;
-
 import org.generation.blogPessoal.model.UserLogin;
 import org.generation.blogPessoal.model.Usuario;
 import org.generation.blogPessoal.service.UsuarioService;
@@ -30,6 +29,13 @@ public class UsuarioController {
 	
 	@PostMapping("/cadastrar")
 	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario){
+		
+		Usuario user = usuarioService.CadastrarUsuario(usuario);
+		
+		if(user == null) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+		}
+		
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(usuarioService.CadastrarUsuario(usuario));
 	}
